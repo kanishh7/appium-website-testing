@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cart-container">
+    <h1>Your Cart</h1>
+    <ul id="cartList"></ul>
+    <a href="shop.html">Back to Shop</a>
+</div>
+<script>
+window.onload = function() {
+    let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    let cartList = document.getElementById('cartList');
+    cartList.innerHTML = '';
+    if(cart.length === 0) {
+        cartList.innerHTML = "<li>Cart is empty</li>";
+    } else {
+        cart.forEach(function(item) {
+            let li = document.createElement('li');
+            li.textContent = item;
+            cartList.appendChild(li);
+        });
+    }
+};
+</script>
+</body>
+</html>

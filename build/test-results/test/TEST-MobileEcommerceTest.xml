@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MobileEcommerceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-06-15T06:15:28.904Z" hostname="DESKTOP-6HQG39M" time="20.246">
+  <properties/>
+  <testcase name="testFullEcommerceFlow" classname="MobileEcommerceTest" time="20.246"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

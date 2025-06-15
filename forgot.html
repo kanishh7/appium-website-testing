@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="forgot-container">
+    <h1>Forgot Password</h1>
+    <form id="forgotForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="forgotMsg"></div>
+    <a href="index.html">Back to Login</a>
+</div>
+<script>
+const forgotForm = document.getElementById('forgotForm');
+const forgotMsg = document.getElementById('forgotMsg');
+
+forgotForm.onsubmit = function(e) {
+    e.preventDefault();
+    forgotMsg.textContent = "Reset link sent to " + document.getElementById('email').value;
+    setTimeout(() => {
+        forgotMsg.textContent = "";
+        forgotForm.reset();
+    }, 1500);
+};
+</script>
+</body>
+</html>

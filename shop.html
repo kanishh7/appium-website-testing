@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop - Mobile Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="user-info" id="userInfo"></div>
+    <h1>Welcome to the Shop</h1>
+    <div class="products">
+      <div class="product" id="product1">
+        <img src="https://cdn.pixabay.com/photo/2015/08/27/09/06/bike-909690_640.jpg" alt="Bike" width="200" />
+
+        <h3>Bike</h3>
+        <p>$1,999</p>
+        <button onclick="addToCart('Bike')">Add to Cart</button>
+      </div>
+      <div class="product" id="product2">
+        <img src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?cs=srgb&dl=pexels-mikebirdy-120049.jpg&fm=jpg" alt="Car" width="200" />
+
+        <h3>Car</h3>
+        <p>$20,999</p>
+        <button onclick="addToCart('Car')">Add to Cart</button>
+      </div>
+      <div class="product" id="product3">
+        <img src="https://cdn.pixabay.com/photo/2015/09/22/19/00/ship-952292_640.jpg" alt="Boat" width="200" />
+
+        <h3>boat</h3>
+        <p>$90,999</p>
+        <button onclick="addToCart('Boat')">Add to Cart</button>
+      </div>
+    </div>
+        <a href="cart.html" class="cart-link">Go to Cart</a>
+    </div>
+    <script>
+    function addToCart(item) {
+        let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(item + " added to cart!");
+    }
+    </script>
+</body>
+</html>
